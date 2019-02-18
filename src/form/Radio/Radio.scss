@@ -1,0 +1,13 @@
+@import "../../scss/utils";
+@import "../form.base";
+
+.radio {
+  @extend %input-choose;
+}
+
+.radio {
+  & + .radio {
+    margin-left: 0.5em;
+
+  }
+}

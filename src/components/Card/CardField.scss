@@ -1,0 +1,20 @@
+@import './Card.base';
+
+.card-field {
+  display: flex;
+  justify-content: space-between;
+
+  &:not(:first-child) {
+    margin-top: $card-field-padding;
+  }
+
+  @each $position, $justify in (left: flex-start, right:flex-end, center:center) {
+    &--#{$position} {
+      justify-content: $justify;
+    }
+  }
+
+  &__label {
+    min-width: 6em;
+  }
+}

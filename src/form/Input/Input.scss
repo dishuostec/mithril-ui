@@ -1,0 +1,22 @@
+@import "../../scss/utils";
+@import "../form.base";
+
+.input {
+  @extend %input;
+}
+
+.input {
+  &.is-rounded {
+    border-radius: $radius-rounded;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  &.is-static {
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

@@ -1,0 +1,24 @@
+@import "../../scss/utils";
+
+$menu-background-color: $white-ter !default;
+$menu-border: 1px solid $grey !default;
+$menu-border-width: 1px 0 !default;
+
+$menu-item-padding-horizontal: 0.5em;
+$menu-item-padding-vertical: 0.5em;
+
+$menu-label-color: $text-light !default;
+$menu-label-padding: $menu-item-padding-vertical $menu-item-padding-horizontal;
+
+$menu-list-border: 1px solid $grey-lighter !default;
+$menu-list-border-width: 1px 0 0 !default;
+
+$menu-item-color: $text !default;
+$menu-item-background-color: $white !default;
+$menu-item-border: 1px solid $grey-lighter !default;
+$menu-item-border-width: 1px 0 0 !default;
+$menu-item-radius: $radius-small !default;
+
+$menu-item-active-color: $link-invert !default;
+$menu-item-active-background-color: $link !default;
+

@@ -1,0 +1,6 @@
+@import "../../scss/utils";
+@import "../form.base";
+
+.checkbox {
+  @extend %input-choose;
+}

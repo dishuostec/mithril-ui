@@ -1,0 +1,11 @@
+@import "./Menu.base";
+
+.menu-label {
+  color: $menu-label-color;
+  font-size: 0.75em;
+  padding: $menu-label-padding;
+
+  &:not(:first-child) {
+    margin-top: 2 * $menu-item-padding-vertical;
+  }
+}

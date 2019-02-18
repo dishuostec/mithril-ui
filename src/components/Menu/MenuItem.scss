@@ -1,0 +1,49 @@
+@import "./Menu.base";
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  border-radius: $menu-item-radius;
+  color: $menu-item-color;
+  //padding: $menu-item-padding;
+  padding: $menu-item-padding-vertical 0;
+  margin: 0 $menu-item-padding-horizontal;
+
+  .is-fullwidth & {
+    margin: 0;
+    padding: $menu-item-padding-vertical $menu-item-padding-horizontal;
+  }
+
+  &:not(:first-child) {
+    border: $menu-item-border;
+    border-width: $menu-item-border-width;
+  }
+
+  // Modifiers
+  &.is-active {
+    background-color: $menu-item-active-background-color;
+    color: $menu-item-active-color;
+  }
+
+  &-content {
+    flex-grow: 1;
+  }
+
+  &-subtitle {
+    font-size: 0.7em;
+  }
+
+  &-tip {
+    color: $grey;
+  }
+
+  &-icon {
+    &-left {
+      margin-right: 0.2em;
+    }
+
+    &-right {
+      color: $grey-light;
+    }
+  }
+}

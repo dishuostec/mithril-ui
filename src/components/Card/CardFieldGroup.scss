@@ -1,0 +1,32 @@
+@import './Card.base';
+
+.card-field-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  &:not(:first-child) {
+    margin-top: $card-field-padding;
+  }
+
+  .card-field {
+    flex-grow: 1;
+    flex-direction: column;
+
+    &:not(:first-child) {
+      margin-left: $card-field-padding;
+      margin-top: auto;
+    }
+
+    @each $position, $align in (left:flex-start, right:flex-end, center:center) {
+      &--#{$position} {
+        justify-content: center;
+        align-items: $align
+      }
+    }
+
+    &__label {
+      min-width: auto;
+    }
+  }
+}

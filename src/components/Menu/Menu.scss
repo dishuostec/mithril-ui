@@ -1,0 +1,21 @@
+@import "./Menu.base";
+
+.menu {
+  font-size: $size-normal;
+  border: $menu-border;
+  border-width: $menu-border-width;
+  background-color: $menu-background-color;
+
+  // Sizes
+  &.is-small {
+    font-size: $size-small;
+  }
+
+  &.is-medium {
+    font-size: $size-medium;
+  }
+
+  &.is-large {
+    font-size: $size-large;
+  }
+}

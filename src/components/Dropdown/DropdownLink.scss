@@ -1,0 +1,7 @@
+@import "./Dropdown.base";
+
+.dropdown-item {
+  &.link {
+    @extend %dropdown-item-inline;
+  }
+}

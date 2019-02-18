@@ -1,0 +1,9 @@
+@import './Card.base';
+
+.card {
+  background-color: $card-background-color;
+  box-shadow: $card-shadow;
+  color: $card-color;
+  max-width: 100%;
+  position: relative;
+}

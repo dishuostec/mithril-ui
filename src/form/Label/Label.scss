@@ -1,0 +1,27 @@
+@import "../../scss/utils";
+@import "../form.base";
+
+.label {
+  color: $label-color;
+  display: block;
+  font-size: $size-normal;
+  font-weight: $label-weight;
+
+  &:not(:last-child) {
+    margin-bottom: 0.5em;
+  }
+
+  // Sizes
+  &.is-small {
+    font-size: $size-small;
+  }
+
+  &.is-medium {
+    font-size: $size-medium;
+  }
+
+  &.is-large {
+    font-size: $size-large;
+
+  }
+}

@@ -1,0 +1,10 @@
+@import "../../scss/utils";
+@import "../form.base";
+
+.field-body {
+  flex-grow: 1;
+
+  .field .field {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,6 @@
+@import './Card.base';
+
+.card-content {
+  background-color: $card-content-background-color;
+  padding: $card-content-padding;
+}

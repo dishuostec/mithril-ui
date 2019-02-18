@@ -1,0 +1,14 @@
+@import "../../scss/utils";
+@import "../form.base";
+
+.field-label {
+  margin-right: 0.75rem;
+  min-width: $field-horizontal-label-min-width;
+
+  .label {
+    font-size: $size-normal;
+    line-height: $input-height;
+  }
+
+  margin-bottom: 0.5rem;
+}

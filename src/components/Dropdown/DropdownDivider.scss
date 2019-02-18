@@ -1,0 +1,10 @@
+@import "./Dropdown.base";
+
+.dropdown-divider {
+  background-color: $dropdown-divider-background-color;
+  border: none;
+  display: block;
+  height: 1px;
+  margin: 0.5rem 0;
+}
+

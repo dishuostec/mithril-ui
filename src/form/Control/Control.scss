@@ -1,0 +1,88 @@
+@import "../../scss/utils";
+@import "../form.base";
+
+.control {
+  box-sizing: border-box;
+  clear: both; //fixes the icon floating out of the input when help text is floated right;
+  font-size: $size-normal;
+  position: relative;
+  text-align: left;
+  // Modifiers
+  &.has-icons-left,
+  &.has-icons-right {
+    .input,
+    .select {
+      &:focus {
+        & ~ .icon {
+          color: $input-icon-active-color;
+        }
+      }
+
+      &.is-small ~ .icon {
+        font-size: $size-small;
+      }
+
+      &.is-medium ~ .icon {
+        font-size: $size-medium;
+      }
+
+      &.is-large ~ .icon {
+        font-size: $size-large;
+      }
+    }
+
+    .icon {
+      color: $input-icon-color;
+      height: $input-height;
+      pointer-events: none;
+      position: absolute;
+      top: 0;
+      width: $input-height;
+      z-index: 4;
+    }
+  }
+
+  &.has-icons-left {
+    .input,
+    .select select {
+      padding-left: $input-height;
+    }
+
+    .icon.is-left {
+      left: 0;
+    }
+  }
+
+  &.has-icons-right {
+    .input,
+    .select select {
+      padding-right: $input-height;
+    }
+
+    .icon.is-right {
+      right: 0;
+    }
+  }
+
+  &.is-loading {
+    &::after {
+      @extend %loader;
+      position: absolute !important;
+      right: 0.625em;
+      top: 0.625em;
+      z-index: 4;
+    }
+
+    &.is-small:after {
+      font-size: $size-small;
+    }
+
+    &.is-medium:after {
+      font-size: $size-medium;
+    }
+
+    &.is-large:after {
+      font-size: $size-large;
+    }
+  }
+}
