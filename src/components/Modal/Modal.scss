@@ -1,0 +1,52 @@
+@import "../../scss/utils";
+
+$modal-z: 40 !default;
+
+$modal-background-background-color: rgba($black, 0.86) !default;
+
+$modal-content-width: 640px !default;
+$modal-content-margin: 20px !default;
+$modal-content-spacing: 160px !default;
+
+$modal-content-radius: $radius-large !default;
+
+.modal {
+  @extend %overlay;
+  align-items: center;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  position: fixed;
+  z-index: $modal-z;
+  // Modifiers
+  &.is-active {
+    display: flex;
+    touch-action: none;
+  }
+}
+
+.modal-background {
+  @extend %overlay;
+  background-color: $modal-background-background-color;
+}
+
+.modal-content {
+  margin: 0 $modal-content-margin;
+  max-height: 90%;
+  max-height: calc(100vh - #{$modal-content-spacing});
+  overflow: hidden;
+  position: relative;
+  max-width: 90%;
+  min-width: 50%;
+  border-radius: $modal-content-radius;
+
+  .card-operations {
+    .button {
+      &.is-fullwidth {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
+    }
+  }
+}

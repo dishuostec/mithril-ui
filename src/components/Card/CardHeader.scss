@@ -3,20 +3,25 @@
 .card-header {
   background-color: $card-header-background-color;
   align-items: stretch;
+  justify-content: space-between;
   box-shadow: $card-header-shadow;
   display: flex;
+
+  &.is-centered {
+    justify-content: center;
+
+    .card-header-icon {
+      padding-left: 0;
+      margin-left: $card-header-padding * -0.75;
+    }
+  }
 
   &-title {
     align-items: center;
     color: $card-header-color;
     display: flex;
-    flex-grow: 1;
     font-weight: $card-header-weight;
     padding: $card-header-padding;
-
-    &.is-centered {
-      justify-content: center;
-    }
   }
 
   &-icon {
