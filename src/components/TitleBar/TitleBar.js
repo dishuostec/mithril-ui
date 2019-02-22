@@ -8,14 +8,14 @@ const TitleBar = {
     const { class: className, noGoBack, title, titleAddon } = vnode.attrs;
 
     return (
-      <header class={classNames('titlebar', className)}>
+      <header class={classNames('title-bar', className)}>
 
         {
           noGoBack
             ? null
             : (
               <div
-                class="titlebar-addon is-left"
+                class="title-bar-addon is-left"
                 onclick={() => {
                   history.length
                     ? history.back()
@@ -27,11 +27,11 @@ const TitleBar = {
             )
         }
 
-        <div class="titlebar-title">{title}</div>
+        <div class="title-bar-title">{title}</div>
 
         {
           titleAddon &&
-          <div class="titlebar-addon is-right">{titleAddon}</div>
+          <div class="title-bar-addon is-right">{titleAddon}</div>
         }
 
       </header>

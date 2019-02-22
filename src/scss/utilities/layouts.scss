@@ -2,13 +2,21 @@ $layout-padding-horizontal: $padding !default;
 
 $layout-header-color: $primary-invert !default;
 $layout-header-background-color: $primary !default;
+
 $layout-header-font-size: $size-normal !default;
 $layout-header-height: $control-height !default;
 
-$layout-footer-color: $primary-invert !default;
-$layout-footer-background-color: $primary !default;
 $layout-footer-font-size: $size-normal !default;
 $layout-footer-height: $control-height !default;
+$layout-footer-border: 1px !default;
+$layout-footer-border-radius: $radius !default;
+
+$layout-footer-color: $grey-lighter !default;
+$layout-footer-background-color: $white-ter !default;
+$layout-footer-border-color: $border !default;
+$layout-footer-active-color: $link-invert !default;
+$layout-footer-active-background-color: $orange !default;
+$layout-footer-active-border-color: $link !default;
 
 // Position
 @mixin is-layout-fixed-top {

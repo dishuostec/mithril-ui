@@ -207,14 +207,21 @@ $control-height-large: px(120) !default;
 
 //  $layout-header-color: $primary-invert !default;
 //  $layout-header-background-color: $primary !default;
+
 //  $layout-header-font-size: $size-normal !default;
-//  $layout-header-height: $control-height !default;
 $layout-header-height: px(88) !default;
 
-//  $layout-footer-color: $primary-invert !default;
-//  $layout-footer-background-color: $primary !default;
 //  $layout-footer-font-size: $size-normal !default;
 $layout-footer-height: px(98) !default;
+$layout-footer-border: 0 !default;
+$layout-footer-border-radius: 0 !default;
+
+//  $layout-footer-color: $grey-lighter !default;
+//  $layout-footer-background-color: $white-ter !default;
+//  $layout-footer-border-color: $border !default;
+//  $layout-footer-active-color: $link-invert !default;
+//  $layout-footer-active-background-color: $orange !default;
+//  $layout-footer-active-border-color: $link !default;
 
 //endregion
 
@@ -528,4 +535,5 @@ $tabs-link-padding: 0.25em 0.5em !default;
 
 
 //endregion
+
 

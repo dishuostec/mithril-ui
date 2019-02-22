@@ -211,7 +211,6 @@ $tabs-toggle-link-active-color: $link-invert !default;
   &.is-vertical {
     .link {
       flex-direction: column;
-      align-items: center;
     }
 
     .icon {

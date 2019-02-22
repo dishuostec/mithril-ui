@@ -1,0 +1,34 @@
+@import "../../scss/utils";
+
+
+.tab-bar {
+  @extend %is-layout-footer;
+  line-height: 1em;
+
+  .tabs {
+    .link {
+      padding: 0;
+      height: $layout-footer-height;
+      border: $layout-footer-border !important;;
+    }
+  }
+
+  li {
+    &:first-child .link {
+      border-radius: $layout-footer-border-radius 0 0 $layout-footer-border-radius !important;
+    }
+
+    &:last-child .link {
+      border-radius: 0 $layout-footer-border-radius $layout-footer-border-radius 0 !important;
+    }
+    
+    &.is-active {
+      .link {
+        color: $layout-footer-active-color;
+        background-color: $layout-footer-active-background-color;
+        border-color: $layout-footer-active-border-color;
+        border-bottom-color: $layout-footer-active-border-color !important;
+      }
+    }
+  }
+}
