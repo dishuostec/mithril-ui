@@ -1,14 +1,16 @@
 import m from 'mithril';
+import classNames from 'classnames';
 import './Radio.scss';
+import IconFa from '../../elements/Icon/IconFa';
 
 const Radio = {
-  view: ({ attrs: { disabled, ...props }, children }) => (
-    <label class="radio" disabled={disabled}>
-      <input
-        {...props}
-        disabled={disabled}
-        type="radio"
-      />
+  view: ({ attrs: { checked, disabled, ...props }, children }) => (
+    <label
+      class={classNames('radio', { 'is-checked': checked })}
+      disabled={disabled}
+      {...props}
+    >
+      <IconFa icon="check" />
       {children}
     </label>
   ),

@@ -5,28 +5,31 @@
   flex-direction: row;
   justify-content: space-between;
 
+  &--evenly {
+    justify-content: space-evenly;
+  }
+
   &:not(:first-child) {
-    margin-top: $card-field-padding;
+    margin-top: $card-field-margin-vertical;
   }
 
   .card-field {
-    flex-grow: 1;
-    flex-direction: column;
 
     &:not(:first-child) {
-      margin-left: $card-field-padding;
-      margin-top: auto;
-    }
-
-    @each $position, $align in (left:flex-start, right:flex-end, center:center) {
-      &--#{$position} {
-        justify-content: center;
-        align-items: $align
-      }
+      margin-left: $card-field-margin-horizontal;
     }
 
     &__label {
-      min-width: auto;
+      min-width: inherit;
+      margin-right: 0.333em;
+    }
+
+    &--vertical {
+      .card-field__label {
+        min-width: inherit;
+        margin-right: inherit;
+      }
     }
   }
+
 }

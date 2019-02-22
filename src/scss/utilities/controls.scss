@@ -4,6 +4,11 @@ $control-radius-small: $radius-small !default;
 $control-border-width: 1px !default;
 
 $control-height: 2.25em !default;
+$control-height-small: $control-height !default;
+$control-height-normal: $control-height !default;
+$control-height-medium: $control-height !default;
+$control-height-large: $control-height !default;
+
 $control-line-height: 1.5 !default;
 
 $control-padding-vertical: calc(0.375em - #{$control-border-width}) !default;
@@ -48,12 +53,15 @@ $control-padding-horizontal: calc(0.625em - #{$control-border-width}) !default;
 @mixin control-small {
   border-radius: $control-radius-small;
   font-size: $size-small;
+  height: $control-height-small;
 }
 
 @mixin control-medium {
   font-size: $size-medium;
+  height: $control-height-medium;
 }
 
 @mixin control-large {
   font-size: $size-large;
+  height: $control-height-large;
 }

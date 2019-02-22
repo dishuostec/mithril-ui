@@ -1,14 +1,16 @@
 import m from 'mithril';
+import classNames from 'classnames';
 import './Checkbox.scss';
+import IconFa from '../../elements/Icon/IconFa';
 
 const Checkbox = {
-  view: ({ attrs: { disabled, ...props }, children }) => (
-    <label class="checkbox" disabled={disabled}>
-      <input
-        {...props}
-        disabled={disabled}
-        type="checkbox"
-      />
+  view: ({ attrs: { checked, disabled, ...props }, children }) => (
+    <label
+      class={classNames('checkbox', { 'is-checked': checked })}
+      disabled={disabled}
+      {...props}
+    >
+      <IconFa icon="check" />
       {children}
     </label>
   ),

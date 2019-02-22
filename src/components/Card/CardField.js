@@ -3,11 +3,12 @@ import classNames from 'classnames';
 import './CardField.scss';
 
 const CardField = {
-  view: ({ attrs: { label, value, name, vertical, left, center, right, class: className, ...props } }) => {
+  view: ({ attrs: { label, value, name, vertical, reverse, left, center, right, class: className, ...props } }) => {
 
     const fieldClass = classNames('card-field', className, {
       [`card-field-${name}`]: name,
       'card-field--vertical': vertical,
+      'card-field--reverse': reverse,
       'card-field--left': left,
       'card-field--center': center,
       'card-field--right': right,

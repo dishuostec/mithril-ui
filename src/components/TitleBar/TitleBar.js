@@ -1,36 +1,37 @@
 import m from 'mithril';
+import classNames from 'classnames';
 import IconUi from '../../elements/Icon/IconUi';
+import './TitleBar.scss';
 
 const TitleBar = {
   view: (vnode) => {
-    const { class: className, noButton, clickTitle, title, titleAddon } = vnode.attrs;
+    const { class: className, noGoBack, title, titleAddon } = vnode.attrs;
 
     return (
-      <header id="titleBar" class={className || null}>
+      <header class={classNames('titlebar', className)}>
 
         {
-          noButton ||
-          <a
-            class="addon-left"
-            onclick={() => {
-              history.length
-                ? history.back()
-                : history.replaceState(null, null, '/');
-            }}
-          >
-            <IconUi icon="triangle-left-outline" />
-          </a>
+          noGoBack
+            ? null
+            : (
+              <div
+                class="titlebar-addon is-left"
+                onclick={() => {
+                  history.length
+                    ? history.back()
+                    : history.replaceState(null, null, '/');
+                }}
+              >
+                <IconUi size={IconUi.SIZE.X2} icon="triangle-left-outline" />
+              </div>
+            )
         }
 
-        <div class="title"
-          onclick={() => {
-            clickTitle && clickTitle();
-          }}
-        >{title}</div>
+        <div class="titlebar-title">{title}</div>
 
         {
           titleAddon &&
-          <div class="addon-right">{titleAddon}</div>
+          <div class="titlebar-addon is-right">{titleAddon}</div>
         }
 
       </header>

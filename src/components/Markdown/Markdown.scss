@@ -1,0 +1,150 @@
+@import "../../scss/utils";
+
+$md-font-size: $size-normal !default;
+$md-color-bold: inherit !default;
+$md-color-emphasis: $info !default;
+
+$md-code-weight: normal !default;
+$md-code-size: 0.875em !default;
+$md-code-padding: 0.25em 0.5em 0.25em !default;
+
+$md-header-sizes: $size-1 $size-2 $size-3 $size-4 $size-5 $size-6 !default;
+
+$md-table-color: $grey-darker !default;
+$md-table-background-color: $white !default;
+$md-table-striped-row-even-background-color: $white-bis !default;
+$md-table-cell-border: 1px solid $grey-lighter !default;
+$md-table-cell-border-width: 0 0 1px !default;
+$md-table-cell-padding: 0.2em 0.4em !default;
+
+$md-blockquote-border-color: $grey-lighter !default;
+$md-blockquote-border-width: 0.5em !default;
+$md-blockquote-background-color: $white-bis !default;
+
+
+%container {
+  margin: 1em 0;
+  width: 100%;
+}
+
+.markdown {
+  font-size: $md-font-size;
+  line-height: 1.4em;
+
+  text-align: left;
+
+  h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+  }
+
+  @each $size in $md-header-sizes {
+    $i: index($md-header-sizes, $size);
+
+    h#{$i} {
+      font-size: $size;
+      line-height: 1.4em;
+    }
+  }
+
+  p {
+    @extend %container;
+    word-break: break-all;
+    white-space: normal;
+    line-height: $md-font-size*1.4;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  code {
+    color: $code;
+    background-color: $code-background;
+    font-size: $md-code-size;
+    font-weight: $md-code-weight;
+    padding: $md-code-padding;
+  }
+
+  strong {
+    color: $md-color-bold;
+  }
+
+  em {
+    font-style: normal;
+    color: $md-color-emphasis;
+  }
+
+  del {
+    //color: $color-text-3;
+  }
+
+  blockquote {
+    @extend %container;
+    padding-left: 1em;
+    background-color: $md-blockquote-background-color;
+    border-left: $md-blockquote-border-width solid $md-blockquote-border-color;
+  }
+
+  pre {
+    @extend %container;
+    padding: 0.3em;
+    background-color: $pre-background;
+    color: $pre;
+    overflow-x: auto;
+
+    code {
+      color: inherit;
+    }
+  }
+
+  ul, ol {
+    @extend %container;
+    padding-left: 2em;
+
+    ul, ol {
+      margin: 0.5em 0;
+    }
+  }
+
+  ul {
+    li {
+      list-style: disc;
+    }
+  }
+
+  table {
+    @extend %container;
+    border-collapse: collapse;
+    color: $md-table-color;
+    background-color: $md-table-background-color;
+  }
+
+  tbody {
+    tr:not(.is-selected) {
+      &:nth-child(even) {
+        background-color: $md-table-striped-row-even-background-color;
+      }
+    }
+  }
+
+  th, td {
+    border: $md-table-cell-border;
+    border-width: $md-table-cell-border-width;
+    padding: $md-table-cell-padding;
+  }
+
+  img {
+    max-width: 100%;
+    //max-height: pxToRem(700);
+  }
+
+  hr {
+    border: 0 none;
+    height: 1px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    //border-top: 1px solid $color-divider;
+  }
+}
+

@@ -4,7 +4,8 @@
   "license": "MIT",
   "scripts": {
     "build": "yarn babel src --out-dir lib --source-maps --copy-files",
-    "dev": "yarn build --watch"
+    "dev": "yarn build --watch",
+    "clean": "rm -rf ./lib/*"
   },
   "files": [
     "lib"
@@ -13,7 +14,8 @@
     "@fortawesome/fontawesome-free": "^5.7.2",
     "@mdi/font": "^3.4.93",
     "classnames": "^2.2.6",
-    "highlight.js": "^9.14.1"
+    "highlight.js": "^9.14.1",
+    "showdown": "^1.9.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",

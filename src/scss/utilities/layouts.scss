@@ -1,0 +1,90 @@
+$layout-padding-horizontal: $padding !default;
+
+$layout-header-color: $primary-invert !default;
+$layout-header-background-color: $primary !default;
+$layout-header-font-size: $size-normal !default;
+$layout-header-height: $control-height !default;
+
+$layout-footer-color: $primary-invert !default;
+$layout-footer-background-color: $primary !default;
+$layout-footer-font-size: $size-normal !default;
+$layout-footer-height: $control-height !default;
+
+// Position
+@mixin is-layout-fixed-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  @include fix-ios-header;
+}
+
+%is-layout-fixed-top {
+  @include is-layout-fixed-top;
+}
+
+@mixin is-layout-fixed-bottom {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  @include fix-ios-footer;
+}
+
+%is-layout-fixed-bottom {
+  @include is-layout-fixed-bottom;
+}
+
+// Elements
+
+@mixin is-layout-header {
+  height: $layout-header-height;
+  color: $layout-header-color;
+  background-color: $layout-header-background-color;
+  font-size: $layout-header-font-size;
+  box-sizing: border-box;
+}
+
+%is-layout-header {
+  @include is-layout-header;
+}
+
+@mixin is-layout-container {
+  margin-left: $layout-padding-horizontal;
+  margin-right: $layout-padding-horizontal;
+}
+
+%is-layout-container {
+  @include is-layout-container;
+}
+
+@mixin is-layout-footer {
+  height: $layout-footer-height;
+  color: $layout-footer-color;
+  background-color: $layout-footer-background-color;
+  font-size: $layout-footer-font-size;
+  box-sizing: border-box;
+}
+
+%is-layout-footer {
+  @include is-layout-footer;
+}
+
+@mixin has-layout-header {
+  padding-top: $layout-header-height;
+}
+
+%has-layout-header {
+  @include has-layout-header;
+}
+
+@mixin has-layout-footer {
+  padding-top: $layout-footer-height;
+}
+
+%has-layout-footer {
+  @include has-layout-footer;
+}
+

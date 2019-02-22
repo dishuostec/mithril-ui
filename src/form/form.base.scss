@@ -42,6 +42,7 @@ $label-color: $grey-darker !default;
 $label-weight: $weight-bold !default;
 
 $field-horizontal-label-min-width: 4em !default;
+$field-margin-vertical: 0.75rem !default;
 
 $help-size: $size-small !default;
 
@@ -80,11 +81,25 @@ $help-size: $size-small !default;
 %input-choose {
   cursor: pointer;
   display: inline-block;
+  vertical-align: middle;
   line-height: 1.25;
   position: relative;
 
-  input {
-    cursor: pointer;
+  .icon {
+    border: 0.1em solid $input-border-color;
+    margin-right: 0.2em;
+    height: 1em;
+    width: 1em;
+
+    i {
+      visibility: hidden;
+    }
+  }
+
+  &.is-checked {
+    .icon i {
+      visibility: visible;
+    }
   }
 
   &:hover {

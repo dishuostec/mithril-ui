@@ -9,17 +9,6 @@
   }
 }
 
-@mixin fa($size, $dimensions) {
-  display: inline-block;
-  font-size: $size;
-  height: $dimensions;
-  line-height: $dimensions;
-  text-align: center;
-  vertical-align: top;
-  width: $dimensions;
-}
-
-
 @mixin overflow-touch {
   -webkit-overflow-scrolling: touch;
 }
@@ -43,9 +32,6 @@
   @include fix-ios-footer;
 }
 
-// Layouts
-
-
 // Placeholders
 
 @mixin unselectable {
@@ -58,27 +44,6 @@
 
 %unselectable {
   @include unselectable;
-}
-
-@mixin arrow($color: transparent) {
-  border: 3px solid $color;
-  border-radius: 2px;
-  border-right: 0;
-  border-top: 0;
-  content: " ";
-  display: block;
-  height: 0.625em;
-  margin-top: -0.4375em;
-  pointer-events: none;
-  position: absolute;
-  top: 50%;
-  transform: rotate(-45deg);
-  transform-origin: center;
-  width: 0.625em;
-}
-
-%arrow {
-  @include arrow;
 }
 
 @mixin block {

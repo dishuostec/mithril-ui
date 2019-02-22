@@ -1,0 +1,27 @@
+@import "../../scss/utils";
+
+.titlebar {
+  @extend %is-layout-header;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+
+  &-title {
+    width: 100%;
+    font-size: $size-medium;
+    text-align: center;
+  }
+
+  &-addon {
+    position: absolute;
+
+    &.is-left {
+      left: 0;
+    }
+
+    &.is-right {
+      right: 0;
+    }
+  }
+}

@@ -3,7 +3,7 @@
 
 .field {
   &:not(:last-child) {
-    margin-bottom: 0.75rem;
+    margin-bottom: $field-margin-vertical;
   }
 
   // Modifiers
@@ -117,12 +117,12 @@
       & > .control {
         &:last-child,
         &:not(:last-child) {
-          margin-bottom: 0.75rem;
+          margin-bottom: $field-margin-vertical;
         }
       }
 
       &:last-child {
-        margin-bottom: -0.75rem;
+        margin-bottom: $field-margin-vertical;
       }
 
       &:not(:last-child) {

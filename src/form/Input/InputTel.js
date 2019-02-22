@@ -1,6 +1,6 @@
 import InputWrapFactory from '../../factory/InputWrap';
 import './Input.scss';
 
-const InputNumber = InputWrapFactory('number');
+const InputTel = InputWrapFactory('tel');
 
-export default InputNumber;
+export default InputTel;

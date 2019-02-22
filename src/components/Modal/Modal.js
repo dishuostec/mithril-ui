@@ -5,6 +5,7 @@ import Card from '../Card/Card';
 import CardContent from '../Card/CardContent';
 import CardHeader from '../Card/CardHeader';
 import CardOperations from '../Card/CardOperations';
+import Markdown from '../Markdown/Markdown';
 import ModalModel from './ModalModel';
 import './Modal.scss';
 
@@ -24,7 +25,7 @@ const Modal = {
 
           <CardContent>
             {ModalModel.isMarkdown
-              ? 'markdown'
+              ? <Markdown content={ModalModel.content} />
               : (
                 <p class="has-text-centered">{ModalModel.content}</p>
               )}

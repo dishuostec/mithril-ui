@@ -45,7 +45,9 @@ $weight-bold: 700 !default;
 
 // Size
 
-$gap: 64px !default;
+$padding-small: 5px !default;
+$padding: 10px !default;
+$padding-large: 20px !default;
 
 // Miscellaneous
 
@@ -55,10 +57,3 @@ $radius: 4px !default;
 $radius-large: 6px !default;
 $radius-rounded: 290486px !default;
 $speed: 86ms !default;
-
-$z-toast: 10000;
-$z-announcement: 2000;
-$z-modal: 1000;
-$z-over-layout: 110;
-$z-layout: 100;
-$z-over-content: 10;

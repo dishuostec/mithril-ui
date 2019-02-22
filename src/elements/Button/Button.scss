@@ -1,5 +1,10 @@
 @import "../../scss/utils";
 
+$button-height-small: $control-height !default;
+$button-height-normal: $control-height !default;
+$button-height-medium: $control-height !default;
+$button-height-large: $control-height !default;
+
 $button-color: $grey-darker !default;
 $button-background-color: $white !default;
 
@@ -37,23 +42,29 @@ $button-static-border-color: $grey-lighter !default;
 @mixin button-small {
   border-radius: $radius-small;
   font-size: $size-small;
+  height: $button-height-small;
 }
 
 @mixin button-normal {
   font-size: $size-normal;
+  height: $button-height-normal;
 }
 
 @mixin button-medium {
   font-size: $size-medium;
+  height: $button-height-medium;
 }
 
 @mixin button-large {
   font-size: $size-large;
+  height: $button-height-large;
 }
 
 .button {
   @extend %control;
   @extend %unselectable;
+  line-height: normal;
+  height: $button-height-normal;
   background-color: $button-background-color;
   border-color: $button-border-color;
   border-width: $button-border-width;
@@ -124,7 +135,7 @@ $button-static-border-color: $grey-lighter !default;
     background-color: transparent;
     border-color: transparent;
     color: $button-text-color;
-    text-decoration: underline;
+    //text-decoration: underline;
 
     &:hover,
     &.is-hovered,

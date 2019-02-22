@@ -4,8 +4,8 @@ $menu-background-color: $white-ter !default;
 $menu-border: 1px solid $grey !default;
 $menu-border-width: 1px 0 !default;
 
-$menu-item-padding-horizontal: 0.5em;
-$menu-item-padding-vertical: 0.5em;
+$menu-item-padding-horizontal: 0.5em !default;
+$menu-item-padding-vertical: 0.5em !default;
 
 $menu-label-color: $text-light !default;
 $menu-label-padding: $menu-item-padding-vertical $menu-item-padding-horizontal;

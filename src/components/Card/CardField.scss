@@ -3,9 +3,14 @@
 .card-field {
   display: flex;
   justify-content: space-between;
+  padding: $card-field-padding;
 
   &:not(:first-child) {
-    margin-top: $card-field-padding;
+    margin-top: $card-field-margin-vertical;
+  }
+
+  &--reverse {
+    flex-direction: row-reverse;
   }
 
   @each $position, $justify in (left: flex-start, right:flex-end, center:center) {
@@ -16,5 +21,28 @@
 
   &__label {
     min-width: 6em;
+  }
+
+  &--vertical {
+    flex-direction: column;
+
+    &.card-field {
+      
+      &--reverse {
+        flex-direction: column-reverse;
+      }
+      
+      @each $position, $align in (left:flex-start, right:flex-end, center:center) {
+        &--#{$position} {
+          justify-content: center;
+          align-items: $align
+        }
+      }
+    }
+
+    &__label {
+      min-width: auto;
+    }
+
   }
 }

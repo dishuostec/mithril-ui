@@ -1,15 +1,6 @@
-import m from 'mithril';
-import classNames from 'classnames';
+import InputWrapFactory from '../../factory/InputWrap';
 import './Input.scss';
 
-const InputText = {
-  view: ({ attrs: { class: className, ...props } }) => (
-    <input
-      {...props}
-      class={classNames('input', className)}
-      type="text"
-    />
-  ),
-};
+const InputText = InputWrapFactory('text');
 
 export default InputText;

@@ -3,11 +3,10 @@ import TitleBar from '../components/TitleBar/TitleBar';
 
 
 const LayoutWithTitleBar = {
-  view: function ({ attrs: { title, clickTitle }, children }) {
+  view: function ({ attrs: { title, class: className, noGoBack, titleAddon }, children }) {
     return (
       <div id="layout" class="has_titleBar">
-        <TitleBar title={title} clickTitle={clickTitle} />
-
+        <TitleBar title={title} class={className} noGoBack={noGoBack} titleAddon={titleAddon} />
         {children}
       </div>
     );
