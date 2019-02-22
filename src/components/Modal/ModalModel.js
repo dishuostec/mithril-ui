@@ -1,11 +1,15 @@
 import m from 'mithril';
 
 const ModalModel = {
+  class: null,
   isMarkdown: false,
   title: null,
   content: null,
   operations: [],
 
+  setClass: (value) => {
+    ModalModel.class = value;
+  },
   setTitle: (value) => {
     ModalModel.title = value;
   },
@@ -23,6 +27,7 @@ const ModalModel = {
     m.redraw();
   },
   hide: (redrew) => {
+    ModalModel.class = null;
     ModalModel.isMarkdown = false;
     ModalModel.title = null;
     ModalModel.content = null;
