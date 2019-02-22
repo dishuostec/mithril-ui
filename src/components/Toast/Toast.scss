@@ -1,0 +1,56 @@
+@import "../../scss/utils";
+
+$toast-z: 40 !default;
+
+$toast-pointer-events: auto !default;
+$toast-overlay-background-color: rgba($black, 0.86) !default;
+
+$toast-color: $text !default;
+$toast-background-color: $white-ter !default;
+
+$toast-padding: $padding-large $padding !default;
+$toast-min-width: 320px !default;
+$toast-min-height: 240px !default;
+
+$toast-border-radius: $radius-large !default;
+
+.toast {
+  @extend %overlay;
+  align-items: center;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  position: fixed;
+  z-index: $toast-z;
+  // Modifiers
+  &.is-active {
+    display: flex;
+    flex-direction: column;
+    touch-action: none;
+  }
+
+  background-color: $toast-overlay-background-color;
+  pointer-events: $toast-pointer-events;
+
+  &-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: $toast-color;
+    background-color: $toast-background-color;
+    padding: $toast-padding;
+    border-radius: $toast-border-radius;
+
+    min-width: $toast-min-width;
+    min-height: $toast-min-height;
+    max-width: 90%;
+    max-height: 90%;
+    overflow: hidden;
+
+    word-break: break-all;
+    white-space: normal;
+  }
+}

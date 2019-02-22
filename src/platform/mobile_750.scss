@@ -79,7 +79,7 @@ $padding-large: px($design-padding * 1.2) !default;
 //  $easing: ease-out !default;
 $radius-small: px(5) !default;
 $radius: px(8) !default;
-$radius-large: px(12) !default;
+$radius-large: px(14) !default;
 $radius-rounded: 290486px !default;
 //  $speed: 86ms !default;
 
@@ -532,6 +532,27 @@ $tabs-link-padding: 0.25em 0.5em !default;
 //  $tabs-toggle-link-active-background-color: $link !default;
 //  $tabs-toggle-link-active-border-color: $link !default;
 //  $tabs-toggle-link-active-color: $link-invert !default;
+
+
+//endregion
+
+//region -------------- toast --------------
+
+//  $toast-z: 40 !default;
+
+$toast-pointer-events: none !default;
+//  $toast-overlay-background-color: rgba($black, 0.86) !default;
+$toast-overlay-background-color: none !default;
+
+$toast-color: #ffffff !default;
+//  $toast-background-color: $white-ter !default;
+$toast-background-color: rgba(70, 70, 70, 0.85) !default;
+
+//  $toast-padding: $padding-large $padding !default;
+$toast-min-width: px(280) !default;
+$toast-min-height: px(180) !default;
+
+//  $toast-border-radius: $radius-large !default;
 
 
 //endregion
