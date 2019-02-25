@@ -15,7 +15,8 @@
     "@mdi/font": "^3.4.93",
     "classnames": "^2.2.6",
     "highlight.js": "^9.14.1",
-    "showdown": "^1.9.0"
+    "showdown": "^1.9.0",
+    "swiper": "^4.4.6"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
