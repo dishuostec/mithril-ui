@@ -89,7 +89,7 @@ $layout-footer-active-border-color: $link !default;
 }
 
 @mixin has-layout-footer {
-  padding-top: $layout-footer-height;
+  padding-bottom: $layout-footer-height;
 }
 
 %has-layout-footer {

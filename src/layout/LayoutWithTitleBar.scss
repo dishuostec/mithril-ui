@@ -1,0 +1,18 @@
+@import "../scss/utils";
+
+#layout {
+  &.has-titleBar {
+    @extend %has-layout-header;
+  }
+  &.has-tabBar {
+    @extend %has-layout-footer;
+  }
+
+  > .title-bar {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+}
