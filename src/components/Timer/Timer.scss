@@ -1,0 +1,16 @@
+@import "../../scss/utils";
+
+@font-face {
+  font-family: "digit";
+  src: url('./fonts/digital-7.mono.ttf') format('truetype');
+}
+
+.timer {
+  &.is-pending {
+    color: $red;
+  }
+
+  &.is-mono {
+    font-family: digit, "Courier New", Courier, "Lucida Console", Monaco, monospace;
+  }
+}
