@@ -60,8 +60,8 @@ const PullDown = () => {
       }
       vnode.attrs.onremove && vnode.attrs.onremove(vnode);
     },
-    view: ({ attrs: { key, class: className }, children }) => (
-      <div key={key} class={classNames('pulltorefresh', className)}>
+    view: ({ attrs: { class: className }, children }) => (
+      <div class={classNames('pulltorefresh', className)}>
         <div class="ha_ptr">
           <div class="ha_ptr__box">
             <div class="ha_ptr__content">

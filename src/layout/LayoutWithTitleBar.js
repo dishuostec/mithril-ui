@@ -1,6 +1,6 @@
 import m from 'mithril';
 import TitleBar from '../components/TitleBar/TitleBar';
-
+import './LayoutWithTitleBar.scss';
 
 const LayoutWithTitleBar = {
   view: function ({ attrs: { title, class: className, noGoBack, titleAddon }, children }) {
