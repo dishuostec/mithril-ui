@@ -1,6 +1,6 @@
 import m from 'mithril';
 import classNames from 'classnames';
-import './Modal.base.scss';
+import './ModalBase.scss';
 
 const ModalBase = {
   view: ({ attrs: { class: className, isActive }, children }) => (
