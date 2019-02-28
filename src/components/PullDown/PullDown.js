@@ -55,7 +55,7 @@ const PullDown = () => {
     },
     onremove: (vnode) => {
       if (pulltorefresh) {
-        pulltorefresh.destory();
+        pulltorefresh.destroy();
         pulltorefresh = null;
       }
       vnode.attrs.onremove && vnode.attrs.onremove(vnode);
