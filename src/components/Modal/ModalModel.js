@@ -1,6 +1,6 @@
 import m from 'mithril';
 
-const ModalModel = {
+export const ModalModel = {
   class: null,
   isMarkdown: false,
   title: null,
@@ -36,5 +36,3 @@ const ModalModel = {
     redrew && m.redraw();
   },
 };
-
-export default ModalModel;

@@ -2,7 +2,7 @@ import m from 'mithril';
 import classNames from 'classnames';
 import './ModalBase.scss';
 
-const ModalBase = {
+export const ModalBase = {
   view: ({ attrs: { class: className, isActive }, children }) => (
     <div class={classNames('modal', className, { 'is-active': isActive })}>
       <div class="modal-background" />
@@ -14,5 +14,3 @@ const ModalBase = {
     </div>
   ),
 };
-
-export default ModalBase;

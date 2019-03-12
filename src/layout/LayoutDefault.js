@@ -1,11 +1,11 @@
 import m from 'mithril';
 import classNames from 'classnames';
-import TitleBar from '../components/TitleBar/TitleBar';
-import TabBar from '../components/TabBar/TabBar';
+import { TitleBar } from '../components/TitleBar/TitleBar';
+import { TabBar } from '../components/TabBar/TabBar';
 import './LayoutWithTitleBar.scss';
 import './LayoutWithTabBar.scss';
 
-const LayoutDefault = {
+export const LayoutDefault = {
   view: function ({ attrs: { title, noGoBack, titleAddon, tabIndex, tabOnChange, tabList, class: className }, children }) {
     return (
       <div id="layout" class={classNames('has-tabBar', 'has-titleBar', className)}>
@@ -23,5 +23,3 @@ const LayoutDefault = {
     );
   },
 };
-
-export default LayoutDefault;

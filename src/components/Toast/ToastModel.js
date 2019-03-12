@@ -1,6 +1,6 @@
 import m from 'mithril';
 
-const ToastModel = {
+export const ToastModel = {
   timer: null,
   class: null,
   content: null,
@@ -32,5 +32,3 @@ const ToastModel = {
     redrew && m.redraw();
   },
 };
-
-export default ToastModel;

@@ -2,7 +2,7 @@ import m from 'mithril';
 import classNames from 'classnames';
 import './MenuItem.scss';
 
-const MenuItem = {
+export const MenuItem = {
   view: ({ attrs: { title, subtitle, iconLeft, iconRight, tip, class: className, ...props } }) => {
 
     const menuItemClass = classNames('menu-item', className);
@@ -26,5 +26,3 @@ const MenuItem = {
     );
   },
 };
-
-export default MenuItem;

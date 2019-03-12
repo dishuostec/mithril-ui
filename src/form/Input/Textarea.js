@@ -1,7 +1,4 @@
-// import m from 'mithril';
 import './Textarea.scss';
-import SimpleWrapFactory from '../../factory/SimpleWrap';
+import { SimpleWrapFactory } from '../../factory/SimpleWrap';
 
-const Textarea = SimpleWrapFactory('textarea', null);
-
-export default Textarea;
+export const Textarea = SimpleWrapFactory('textarea', null);

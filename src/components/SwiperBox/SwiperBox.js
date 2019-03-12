@@ -11,7 +11,7 @@ const EFFECT = {
   FLIP: 'flip',
 };
 
-const SwiperBox = () => {
+export const SwiperBox = () => {
   let swiper;
 
   return {
@@ -95,5 +95,3 @@ const SwiperBox = () => {
 };
 
 SwiperBox.EFFECT = EFFECT;
-
-export default SwiperBox;

@@ -1,6 +1,4 @@
-import SimpleWrapFactory from '../../factory/SimpleWrap';
+import { SimpleWrapFactory } from '../../factory/SimpleWrap';
 import './CardFooter.scss';
 
-const CardFooter = SimpleWrapFactory('card-footer');
-
-export default CardFooter;
+export const CardFooter = SimpleWrapFactory('card-footer');

@@ -1,7 +1,7 @@
 import m from 'mithril';
 import classNames from 'classnames';
 
-const SimpleWrapFactory = (wrapperClass, tagName = 'div') => {
+export const SimpleWrapFactory = (wrapperClass, tagName = 'div') => {
   if (!tagName) {
     tagName = wrapperClass;
   }
@@ -13,5 +13,3 @@ const SimpleWrapFactory = (wrapperClass, tagName = 'div') => {
     },
   };
 };
-
-export default SimpleWrapFactory;

@@ -1,10 +1,10 @@
 import classNames from 'classnames';
 import m from 'mithril';
-import Button from '../../elements/Button/Button';
-import IconUi from '../../elements/Icon/IconUi';
+import { Button } from '../../elements/Button/Button';
+import { IconUi } from '../../elements/Icon/IconUi';
 import './DropdownItem.scss';
 
-const Dropdown = (initialVnote) => {
+export const Dropdown = (initialVnote) => {
   let isActive = false;
 
   const showMenu = () => {
@@ -59,5 +59,3 @@ const Dropdown = (initialVnote) => {
     },
   };
 };
-
-export default Dropdown;

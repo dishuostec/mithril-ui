@@ -2,7 +2,7 @@ import m from 'mithril';
 import classNames from 'classnames';
 import './Control.scss';
 
-const Control = {
+export const Control = {
   view: ({ attrs: { class: className, ...props }, children }) => (
     <div
       {...props}
@@ -11,5 +11,3 @@ const Control = {
     </div>
   ),
 };
-
-export default Control;

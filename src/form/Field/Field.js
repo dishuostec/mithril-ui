@@ -1,7 +1,4 @@
-// import m from 'mithril';
 import './Field.scss';
-import SimpleWrapFactory from '../../factory/SimpleWrap';
+import { SimpleWrapFactory } from '../../factory/SimpleWrap';
 
-const Field = SimpleWrapFactory('field');
-
-export default Field;
+export const Field = SimpleWrapFactory('field');

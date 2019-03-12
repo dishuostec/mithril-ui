@@ -1,6 +1,4 @@
-import SimpleWrapFactory from '../../factory/SimpleWrap';
+import { SimpleWrapFactory } from '../../factory/SimpleWrap';
 import './CardContent.scss';
 
-const CardContent = SimpleWrapFactory('card-content');
-
-export default CardContent;
+export const CardContent = SimpleWrapFactory('card-content');

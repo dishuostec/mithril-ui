@@ -21,7 +21,7 @@
     &:last-child .link {
       border-radius: 0 $layout-footer-border-radius $layout-footer-border-radius 0 !important;
     }
-    
+
     &.is-active {
       .link {
         color: $layout-footer-active-color;

@@ -2,7 +2,7 @@ import m from 'mithril';
 import classNames from 'classnames';
 import './Link.scss';
 
-const Link = {
+export const Link = {
   view: function ({ attrs: { to, replace = false, onclick, class: className, ...props }, children }) {
     return <span
       {...props}
@@ -14,5 +14,3 @@ const Link = {
     >{children}</span>;
   },
 };
-
-export default Link;

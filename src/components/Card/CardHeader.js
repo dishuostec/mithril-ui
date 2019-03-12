@@ -1,9 +1,9 @@
 import m from 'mithril';
 import classNames from 'classnames';
-import IconUi from '../../elements/Icon/IconUi';
+import { IconUi } from '../../elements/Icon/IconUi';
 import './CardHeader.scss';
 
-const CardHeader = {
+export const CardHeader = {
   view: ({ attrs: { title, icon, class: className, ...props }, children }) => {
 
     const cardHeaderClass = classNames('card-header', className);
@@ -24,5 +24,3 @@ const CardHeader = {
     );
   },
 };
-
-export default CardHeader;

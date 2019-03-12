@@ -1,6 +1,4 @@
-import InputWrapFactory from '../../factory/InputWrap';
+import { InputWrapFactory } from '../../factory/InputWrap';
 import './Input.scss';
 
-const InputText = InputWrapFactory('text');
-
-export default InputText;
+export const InputText = InputWrapFactory('text');

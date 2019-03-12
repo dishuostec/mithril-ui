@@ -2,7 +2,7 @@ import m from 'mithril';
 import classNames from 'classnames';
 import './CardFieldGroup.scss';
 
-const CardFieldGroup = {
+export const CardFieldGroup = {
   view: ({ attrs: { category, spaceEvenly, class: className, ...props }, children }) => {
 
     const fieldClass = classNames('card-field-group', className, {
@@ -20,5 +20,3 @@ const CardFieldGroup = {
     );
   },
 };
-
-export default CardFieldGroup;

@@ -1,9 +1,9 @@
 import m from 'mithril';
 import classNames from 'classnames';
 import './Radio.scss';
-import IconFa from '../../elements/Icon/IconFa';
+import { IconFa } from '../../elements/Icon/IconFa';
 
-const Radio = {
+export const Radio = {
   view: ({ attrs: { checked, disabled, ...props }, children }) => (
     <label
       class={classNames('radio', { 'is-checked': checked })}
@@ -15,5 +15,3 @@ const Radio = {
     </label>
   ),
 };
-
-export default Radio;

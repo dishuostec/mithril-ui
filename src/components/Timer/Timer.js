@@ -1,9 +1,9 @@
 import m from 'mithril';
 import classNames from 'classnames';
 import './Timer.scss';
-import TimerCounter from './TimerCounter';
+import { TimerCounter } from './TimerCounter';
 
-const Timer = {
+export const Timer = {
   COUNTER: TimerCounter,
   view: function ({ attrs: { tid, class: className, isMono = false } }) {
     return (
@@ -16,5 +16,3 @@ const Timer = {
     );
   },
 };
-
-export default Timer;

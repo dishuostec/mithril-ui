@@ -2,7 +2,7 @@ import m from 'mithril';
 import classNames from 'classnames';
 import './Indicator.scss';
 
-const Indicator = {
+export const Indicator = {
   view: ({ attrs: { type, class: className, ...props } }) => {
     switch (type) {
 
@@ -43,5 +43,3 @@ const Indicator = {
     }
   },
 };
-
-export default Indicator;

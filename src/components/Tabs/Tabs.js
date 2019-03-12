@@ -2,7 +2,7 @@ import m from 'mithril';
 import classNames from 'classnames';
 import './Tabs.scss';
 
-const Tabs = {
+export const Tabs = {
   view: ({ attrs: { class: className, list, onchange, activeIndex }, children }) => (
     <div class={classNames('tabs', className)}>
       <ul>
@@ -18,5 +18,3 @@ const Tabs = {
     </div>
   ),
 };
-
-export default Tabs;

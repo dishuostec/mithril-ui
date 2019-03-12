@@ -10,7 +10,7 @@ const converter = new Converter({
   tasklists: true,
 });
 
-const Markdown = (initialVnode) => {
+export const Markdown = (initialVnode) => {
   let markdown;
 
   const update = (content) => {
@@ -42,5 +42,3 @@ const Markdown = (initialVnode) => {
     },
   };
 };
-
-export default Markdown;

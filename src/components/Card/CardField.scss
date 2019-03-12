@@ -27,11 +27,11 @@
     flex-direction: column;
 
     &.card-field {
-      
+
       &--reverse {
         flex-direction: column-reverse;
       }
-      
+
       @each $position, $align in (left:flex-start, right:flex-end, center:center) {
         &--#{$position} {
           justify-content: center;

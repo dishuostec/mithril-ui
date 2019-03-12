@@ -1,7 +1,7 @@
 import m from 'mithril';
 import './Label.scss';
 
-const Label = {
+export const Label = {
   view: ({ attrs: { disabled, ...props }, children }) => (
     <label
       {...props}
@@ -10,5 +10,3 @@ const Label = {
     >{children}</label>
   ),
 };
-
-export default Label;

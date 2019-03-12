@@ -26,7 +26,7 @@ const TRANSFORM = Object.freeze({
   FLIP_BOTH: 'icon-flip-both',
 });
 
-const IconWrapFactory = (iconCategroy, iconPrefix) => {
+export const IconWrapFactory = (iconCategroy, iconPrefix) => {
   return {
     SIZE,
     TRANSFORM,
@@ -49,5 +49,3 @@ const IconWrapFactory = (iconCategroy, iconPrefix) => {
     },
   };
 };
-
-export default IconWrapFactory;

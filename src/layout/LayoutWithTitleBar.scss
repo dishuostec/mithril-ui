@@ -4,6 +4,7 @@
   &.has-titleBar {
     @extend %has-layout-header;
   }
+
   &.has-tabBar {
     @extend %has-layout-footer;
   }

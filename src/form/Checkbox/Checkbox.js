@@ -1,9 +1,9 @@
 import m from 'mithril';
 import classNames from 'classnames';
 import './Checkbox.scss';
-import IconFa from '../../elements/Icon/IconFa';
+import { IconFa } from '../../elements/Icon/IconFa';
 
-const Checkbox = {
+export const Checkbox = {
   view: ({ attrs: { checked, disabled, ...props }, children }) => (
     <label
       class={classNames('checkbox', { 'is-checked': checked })}
@@ -15,5 +15,3 @@ const Checkbox = {
     </label>
   ),
 };
-
-export default Checkbox;

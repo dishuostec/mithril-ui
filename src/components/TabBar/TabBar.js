@@ -1,9 +1,9 @@
 import m from 'mithril';
 import classNames from 'classnames';
 import './TabBar.scss';
-import Tabs from '../Tabs/Tabs';
+import { Tabs } from '../Tabs/Tabs';
 
-const TabBar = {
+export const TabBar = {
   view: (vnode) => {
     const { class: className, activeIndex, onchange, list } = vnode.attrs;
 
@@ -18,5 +18,3 @@ const TabBar = {
     );
   },
 };
-
-export default TabBar;

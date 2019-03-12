@@ -1,9 +1,9 @@
 import m from 'mithril';
 import classNames from 'classnames';
-import IconUi from '../../elements/Icon/IconUi';
+import { IconUi } from '../../elements/Icon/IconUi';
 import './TitleBar.scss';
 
-const TitleBar = {
+export const TitleBar = {
   view: (vnode) => {
     const { class: className, noGoBack, title, titleAddon } = vnode.attrs;
 
@@ -38,5 +38,3 @@ const TitleBar = {
     );
   },
 };
-
-export default TitleBar;

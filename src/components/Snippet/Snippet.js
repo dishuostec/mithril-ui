@@ -7,7 +7,7 @@ import './Snippet.scss';
 
 hljs.registerLanguage('html', html);
 
-const Snippet = {
+export const Snippet = {
   oncreate: (vnode) => {
     hljs.highlightBlock(vnode.dom.querySelector('code'));
   },
@@ -18,5 +18,3 @@ const Snippet = {
     </details>
   ),
 };
-
-export default Snippet;

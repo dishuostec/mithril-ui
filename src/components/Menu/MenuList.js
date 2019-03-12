@@ -1,6 +1,4 @@
-import SimpleWrapFactory from '../../factory/SimpleWrap';
+import { SimpleWrapFactory } from '../../factory/SimpleWrap';
 import './MenuList.scss';
 
-const MenuList = SimpleWrapFactory('menu-list');
-
-export default MenuList;
+export const MenuList = SimpleWrapFactory('menu-list');

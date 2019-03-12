@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import ptr from './library/init';
 import './PullDown.scss';
 
-const PullDown = () => {
+export const PullDown = () => {
   let pulltorefresh;
 
   return ({
@@ -75,5 +75,3 @@ const PullDown = () => {
     ),
   });
 };
-
-export default PullDown;

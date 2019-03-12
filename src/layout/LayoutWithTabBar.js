@@ -1,9 +1,9 @@
 import m from 'mithril';
 import classNames from 'classnames';
-import TabBar from '../components/TabBar/TabBar';
+import { TabBar } from '../components/TabBar/TabBar';
 import './LayoutWithTitleBar.scss';
 
-const LayoutWithTitleBar = {
+export const LayoutWithTitleBar = {
   view: function ({ attrs: { tabIndex, tabOnChange, tabList, class: className }, children }) {
     return (
       <div id="layout" class={classNames('has-tabBar', className)}>
@@ -19,5 +19,3 @@ const LayoutWithTitleBar = {
     );
   },
 };
-
-export default LayoutWithTitleBar;

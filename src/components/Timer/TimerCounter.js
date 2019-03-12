@@ -71,11 +71,9 @@ const get = (id) => counterSet.has(id) ? counterSet.get(id)[0] : 0;
 
 const format = (id) => formatTimer(get(id));
 
-const TimerCounter = {
+export const TimerCounter = {
   start,
   remove,
   get,
   format,
 };
-
-export default TimerCounter;

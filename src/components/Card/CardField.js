@@ -2,7 +2,7 @@ import m from 'mithril';
 import classNames from 'classnames';
 import './CardField.scss';
 
-const CardField = {
+export const CardField = {
   view: ({ attrs: { label, value, name, vertical, reverse, left, center, right, class: className, ...props } }) => {
 
     const fieldClass = classNames('card-field', className, {
@@ -25,5 +25,3 @@ const CardField = {
     );
   },
 };
-
-export default CardField;
