@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import m from 'mithril';
 import { Button } from '../../elements/Button/Button';
 import { IconUi } from '../../elements/Icon/IconUi';
-import './DropdownItem.scss';
+import './Dropdown.scss';
 
 export const Dropdown = (initialVnote) => {
   let isActive = false;

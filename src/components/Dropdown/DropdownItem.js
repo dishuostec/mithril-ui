@@ -1,4 +1,4 @@
 import { SimpleWrapFactory } from '../../factory/SimpleWrap';
-import './Dropdown.scss';
+import './DropdownItem.scss';
 
 export const DropdownItem = SimpleWrapFactory('dropdown-item');
