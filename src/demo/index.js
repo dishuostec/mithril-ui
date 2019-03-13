@@ -7,6 +7,7 @@ import { DropdownPage } from './components/DropdownPage';
 import { MarkdownPage } from './components/MarkdownPage';
 import { MenuPage } from './components/MenuPage';
 import { ModalPage } from './components/ModalPage';
+import { NavbarPage } from './components/NavbarPage';
 import { PullDownPage } from './components/PullDownPage';
 import { SwiperBoxPage } from './components/SwiperBoxPage';
 import { TabBarPage } from './components/TabBarPage';
@@ -52,6 +53,7 @@ const components = {
   '/markdown': MarkdownPage,
   '/menu': MenuPage,
   '/modal': ModalPage,
+  '/navbar': NavbarPage,
   '/pullDown': PullDownPage,
   '/swiperBox': SwiperBoxPage,
   '/tabBar': TabBarPage,
