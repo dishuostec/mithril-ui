@@ -14,6 +14,9 @@
   }
 
   .card-field {
+    flex-grow: 1;
+    margin-top: 0;
+    width: 100%;
 
     &:not(:first-child) {
       margin-left: $card-field-margin-horizontal;
