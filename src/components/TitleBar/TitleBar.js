@@ -4,11 +4,10 @@ import { IconUi } from '../../elements/Icon/IconUi';
 import './TitleBar.scss';
 
 export const TitleBar = {
-  view: (vnode) => {
-    const { class: className, noGoBack, title, titleAddon } = vnode.attrs;
+  view: ({ attrs: { class: className, noGoBack, title, titleAddon, ...props } }) => {
 
     return (
-      <header class={classNames('title-bar', className)}>
+      <header class={classNames('title-bar', className)} {...props}>
 
         {
           noGoBack
@@ -22,7 +21,7 @@ export const TitleBar = {
                     : history.replaceState(null, null, '/');
                 }}
               >
-                <IconUi size={IconUi.SIZE.X2} icon="triangle-left-outline" />
+                <IconUi icon="triangle-left-outline" />
               </div>
             )
         }

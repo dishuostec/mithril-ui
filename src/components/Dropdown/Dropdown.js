@@ -43,7 +43,7 @@ export const Dropdown = (initialVnote) => {
               }
             }}
           >
-            <Button class="button">
+            <Button>
               <span>{text}</span>
               <IconUi class="is-small" icon="triangle-down-outline" />
             </Button>

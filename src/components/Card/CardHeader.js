@@ -4,7 +4,7 @@ import { IconUi } from '../../elements/Icon/IconUi';
 import './CardHeader.scss';
 
 export const CardHeader = {
-  view: ({ attrs: { title, icon, class: className, ...props }, children }) => {
+  view: ({ attrs: { title, addon, icon, class: className, ...props }, children }) => {
 
     const cardHeaderClass = classNames('card-header', className);
 
@@ -14,6 +14,11 @@ export const CardHeader = {
         class={cardHeaderClass}
       >
         <div class="card-header-title">{title}</div>
+        {addon && (
+          <div class="card-header-addon">
+            {addon}
+          </div>
+        )}
         {icon && (
           <div class="card-header-icon">
             <IconUi icon={icon} />

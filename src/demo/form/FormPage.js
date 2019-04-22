@@ -144,7 +144,7 @@ export const FormPage = {
                     <InputNumber placeholder="请输入短信验证码" />
                   </Control>
                   <Control>
-                    <Button class="is-medium is-size-5">获取验证码</Button>
+                    <Button class="is-size-5">获取验证码</Button>
                   </Control>
                 </Field>
               </FieldBody>

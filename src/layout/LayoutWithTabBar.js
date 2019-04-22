@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import { TabBar } from '../components/TabBar/TabBar';
 import './LayoutWithTitleBar.scss';
 
-export const LayoutWithTitleBar = {
+export const LayoutWithTabBar = {
   view: function ({ attrs: { tabIndex, tabOnChange, tabList, class: className }, children }) {
     return (
       <div id="layout" class={classNames('has-tabBar', className)}>
@@ -11,6 +11,7 @@ export const LayoutWithTitleBar = {
         {children}
 
         <TabBar
+          id="tabBar"
           activeIndex={tabIndex}
           onchange={tabOnChange}
           list={tabList}

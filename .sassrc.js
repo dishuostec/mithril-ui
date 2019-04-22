@@ -9,8 +9,8 @@ const imports = [];
 
 
 if (process.env.MMU_LOAD_CONFIG_PATH) {
-  imports.push('config');
-  config.includePaths.push(path.resolve(cwd, process.env.MMU_LOAD_CONFIG_PATH));
+  imports.push(process.env.MMU_LOAD_CONFIG_PATH + '/config');
+  config.includePaths.push(path.resolve(cwd));
 }
 
 if (process.env.MMU_PLATFORM) {

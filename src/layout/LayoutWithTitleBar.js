@@ -8,7 +8,9 @@ export const LayoutWithTitleBar = {
     return (
       <div id="layout" class={classNames('has-titleBar', className)}>
 
-        <TitleBar title={title} noGoBack={noGoBack} titleAddon={titleAddon} />
+        <TitleBar
+          id="titleBar"
+          title={title} noGoBack={noGoBack} titleAddon={titleAddon} />
 
         {children}
 

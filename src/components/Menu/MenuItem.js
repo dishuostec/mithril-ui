@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import './MenuItem.scss';
 
 export const MenuItem = {
-  view: ({ attrs: { title, subtitle, iconLeft, iconRight, tip, class: className, ...props } }) => {
+  view: ({ attrs: { to, onclick, title, subtitle, iconLeft, iconRight, tip, class: className, ...props } }) => {
 
     const menuItemClass = classNames('menu-item', className);
 
@@ -11,6 +11,10 @@ export const MenuItem = {
       <div
         {...props}
         class={menuItemClass}
+        onclick={() => {
+          to && m.route.set(to);
+          onclick && onclick();
+        }}
       >
         {iconLeft && <div class="menu-item-icon-left">{iconLeft}</div>}
 

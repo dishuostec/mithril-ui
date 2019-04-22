@@ -5,10 +5,10 @@ import { Tabs } from '../Tabs/Tabs';
 
 export const TabBar = {
   view: (vnode) => {
-    const { class: className, activeIndex, onchange, list } = vnode.attrs;
+    const { class: className, activeIndex, onchange, list, ...props } = vnode.attrs;
 
     return (
-      <footer class={classNames('tab-bar', className)}>
+      <footer class={classNames('tab-bar', className)} {...props}>
         <Tabs
           class="is-toggle is-fullwidth is-vertical"
           activeIndex={activeIndex}

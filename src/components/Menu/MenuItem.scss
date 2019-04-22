@@ -5,8 +5,8 @@
   align-items: center;
   border-radius: $menu-item-radius;
   color: $menu-item-color;
-  padding: $menu-item-padding-vertical 0;
-  margin: 0 $menu-item-padding-horizontal;
+  padding: $menu-item-padding-vertical $menu-item-padding-horizontal;
+  cursor: pointer;
 
   .is-fullwidth & {
     margin: 0;
@@ -17,11 +17,16 @@
     border: $menu-item-border;
     border-width: $menu-item-border-width;
   }
-
+  
   // Modifiers
   &.is-active {
     background-color: $menu-item-active-background-color;
     color: $menu-item-active-color;
+  }
+
+  &:hover{
+    background-color: $menu-item-hover-background-color;
+    color: $menu-item-hover-color;
   }
 
   &-content {

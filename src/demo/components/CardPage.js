@@ -286,12 +286,8 @@ export const CardPage = {
               />
 
               <CardContent>
-                <CardFieldGroup>
-                  <CardField label="垂直显示" value="内容" vertical={true} />
-                </CardFieldGroup>
-                <CardFieldGroup>
-                  <CardField label="垂直显示" value="内容" vertical={true} reverse={true} />
-                </CardFieldGroup>
+                <CardField label="垂直显示" value="内容" vertical={true} />
+                <CardField label="垂直显示" value="内容" vertical={true} reverse={true} />
               </CardContent>
 
               <CardContent>
