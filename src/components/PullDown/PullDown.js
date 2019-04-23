@@ -54,10 +54,8 @@ export const PullDown = () => {
       vnode.oncreate && vnode.oncreate(vnode);
     },
     onremove: (vnode) => {
-      if (pulltorefresh) {
-        pulltorefresh.destroy();
-        pulltorefresh = null;
-      }
+      ptr.destroy();
+      pulltorefresh = null;
       vnode.attrs.onremove && vnode.attrs.onremove(vnode);
     },
     view: ({ attrs: { class: className }, children }) => (
