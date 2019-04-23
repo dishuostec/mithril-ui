@@ -21,6 +21,13 @@ export default {
   onRefresh: () => location.reload(),
   resistanceFunction: t => Math.min(1, t / 2.5),
   shouldPullToRefresh() {
+    // console.log([
+    //   this.mainElement.scrollTop, // error in chrome device emulator
+    //   document.documentElement.scrollTop, // error in real device
+    //   document.scrollingElement.scrollTop,
+    //   window.scrollY,
+    // ].join(','));
+
     return typeof this.mainElement === 'string'
       ? !document.querySelector(this.mainElement).scrollTop
       : (
@@ -28,8 +35,8 @@ export default {
           ? (
             this.mainElement === document.body
               ? (
-                document.documentElement
-                  ? !document.documentElement.scrollTop
+                document.scrollingElement
+                  ? !document.scrollingElement.scrollTop
                   : !window.scrollY
               )
               : !this.mainElement.scrollTop
