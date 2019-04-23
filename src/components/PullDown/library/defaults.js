@@ -23,6 +23,18 @@ export default {
   shouldPullToRefresh() {
     return typeof this.mainElement === 'string'
       ? !document.querySelector(this.mainElement).scrollTop
-      : this.mainElement && !this.mainElement.scrollTop;
+      : (
+        this.mainElement
+          ? (
+            this.mainElement === document.body
+              ? (
+                document.documentElement
+                  ? !document.documentElement.scrollTop
+                  : !window.scrollY
+              )
+              : !this.mainElement.scrollTop
+          )
+          : false
+      );
   },
 };
