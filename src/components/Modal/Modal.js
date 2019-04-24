@@ -24,7 +24,11 @@ export const Modal = {
           {ModalModel.isMarkdown
             ? <Markdown content={ModalModel.content} />
             : (
-              <p class="has-text-centered">{ModalModel.content}</p>
+              typeof ModalModel.content === 'string'
+                ? (
+                  <p class="has-text-centered">{ModalModel.content}</p>
+                )
+                : ModalModel.content
             )}
         </CardContent>
 
