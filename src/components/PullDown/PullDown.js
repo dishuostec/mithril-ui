@@ -54,7 +54,7 @@ export const PullDown = () => {
       vnode.oncreate && vnode.oncreate(vnode);
     },
     onremove: (vnode) => {
-      ptr.destroy();
+      ptr.destroyAll();
       pulltorefresh = null;
       vnode.attrs.onremove && vnode.attrs.onremove(vnode);
     },
