@@ -1,54 +1,67 @@
 import m from 'mithril';
 import classNames from 'classnames';
 
+const defaultFormat = (value) => {
+  return value;
+};
 
 export const InputWrapFactory = (inputType, { defaultFilter, defaultConverter } = {}) => {
-  return {
+  return () => {
 
-    displayValue: '',
+    let displayValue;
+    let isFocus = false;
 
-    view: (vnode) => {
-      const { attrs, state } = vnode;
-      const { class: className, value, displayValue, filter, converter, oninput, ...props } = attrs;
+    return {
+      view: (vnode) => {
+        const { attrs } = vnode;
+        const { class: className, value, filter, converter, format, oninput, onfocus, onblur, ...props } = attrs;
 
-      return (
-        <input
-          {...props}
-          class={classNames('input', className)}
-          type={inputType}
-          value={value !== void 0
-            ? value
-            : displayValue !== void 0
-              ? displayValue
-              : state.displayValue
-          }
-          oninput={(e) => {
-            let displayValue = e.target.value;
+        const formater = format || defaultFormat;
 
-            // filters
-            if (defaultFilter) {
-              displayValue = state.displayValue = defaultFilter(displayValue, attrs);
-            }
-            if (filter) {
-              displayValue = state.displayValue = filter(displayValue, attrs);
-            }
+        return (
+          <input
+            {...props}
+            class={classNames('input', className)}
+            type={inputType}
+            value={formater(isFocus ? displayValue : value)}
+            onfocus={() => {
+              displayValue = value;
+              isFocus = true;
+              onfocus && onfocus();
+            }}
+            onblur={() => {
+              displayValue = value;
+              isFocus = false;
+              onblur && onblur();
+            }}
+            oninput={(e) => {
+              let value = e.target.value;
 
-            if (oninput) {
-              let value = displayValue;
-
-              // converters
-              if (defaultConverter) {
-                value = defaultConverter(value);
+              // filters
+              if (defaultFilter) {
+                value = defaultFilter(value, attrs);
               }
-              if (converter) {
-                value = converter(value);
+              if (filter) {
+                value = filter(value, attrs);
               }
 
-              oninput(value);
-            }
-          }}
-        />
-      );
-    },
+              displayValue = value;
+
+              if (oninput) {
+                // converters
+                if (defaultConverter) {
+                  value = defaultConverter(value, attrs);
+                }
+                if (converter) {
+                  value = converter(value, attrs);
+                }
+
+                oninput(value);
+              }
+            }}
+          />
+        );
+      },
+    };
   };
 };

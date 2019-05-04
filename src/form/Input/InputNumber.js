@@ -3,22 +3,15 @@ import './Input.scss';
 
 const pattern = /^[+-]?\d*(?:\.\d*)?/;
 
-const defaultNumberConverter = parseFloat;
 
-const defaultNumberFilter = (displayValue, attrs) => {
+const defaultNumberConverter = (value, attrs) => {
+  value = parseFloat(value);
+
+  if (isNaN(value)) {
+    return null;
+  }
+
   const { min, max } = attrs;
-
-  const match = pattern.exec(displayValue);
-
-  if (match) {
-    displayValue = match[0];
-  }
-
-  if (min == null && max == null) {
-    return displayValue;
-  }
-
-  let value = defaultNumberConverter(displayValue);
 
   if (min != null && value < min) {
     return min;
@@ -26,6 +19,16 @@ const defaultNumberFilter = (displayValue, attrs) => {
 
   if (max != null && value > max) {
     return max;
+  }
+
+  return value;
+};
+
+const defaultNumberFilter = (displayValue, attrs) => {
+  const match = pattern.exec(displayValue);
+
+  if (match) {
+    displayValue = match[0];
   }
 
   return displayValue;
