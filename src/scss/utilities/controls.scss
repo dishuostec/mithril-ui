@@ -18,6 +18,7 @@ $control-padding-horizontal: calc(0.625em - #{$control-border-width}) !default;
   -moz-appearance: none;
   -webkit-appearance: none;
   align-items: center;
+  box-sizing: border-box;
   border: $control-border-width solid transparent;
   border-radius: $control-radius;
   box-shadow: none;
