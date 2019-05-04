@@ -1,6 +1,9 @@
 @import "../scss/utils";
 
 #layout {
+  @extend %fix-ios-header;
+  @extend %fix-ios-footer;
+  
   &.has-titleBar {
     @extend %has-layout-header;
   }
@@ -10,10 +13,8 @@
   }
 
   > .title-bar {
+    @extend %is-layout-fixed-top;
+
     z-index: 100;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
   }
 }

@@ -66,6 +66,7 @@
 
 // iOS
 @mixin fix-ios-header {
+  box-sizing: content-box;
   padding-top: constant(safe-area-inset-top); /* iOS 11.0 */
   padding-top: env(safe-area-inset-top); /* iOS 11.2 */
 }
@@ -74,13 +75,32 @@
   @include fix-ios-header;
 }
 
+@mixin fix-has-ios-header {
+  margin-top: constant(safe-area-inset-top); /* iOS 11.0 */
+  margin-top: env(safe-area-inset-top); /* iOS 11.2 */
+}
+
+%fix-has-ios-header {
+  @include fix-has-ios-header;
+}
+
 @mixin fix-ios-footer {
+  box-sizing: content-box;
   padding-bottom: constant(safe-area-inset-bottom); /* iOS 11.0 */
   padding-bottom: env(safe-area-inset-bottom); /* iOS 11.2 */
 }
 
 %fix-ios-footer {
   @include fix-ios-footer;
+}
+
+@mixin fix-has-ios-footer {
+  margin-bottom: constant(safe-area-inset-bottom); /* iOS 11.0 */
+  margin-bottom: env(safe-area-inset-bottom); /* iOS 11.2 */
+}
+
+%fix-has-ios-footer {
+  @include fix-has-ios-footer;
 }
 
 // Responsiveness

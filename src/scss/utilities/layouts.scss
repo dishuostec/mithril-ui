@@ -85,6 +85,7 @@ $layout-footer-active-border-color: $link !default;
 }
 
 %has-layout-header {
+  @extend %fix-has-ios-header;
   @include has-layout-header;
 }
 
@@ -93,6 +94,7 @@ $layout-footer-active-border-color: $link !default;
 }
 
 %has-layout-footer {
+  @extend %fix-has-ios-footer;
   @include has-layout-footer;
 }
 
