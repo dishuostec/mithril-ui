@@ -8,10 +8,11 @@ export const ToastModel = {
   setClass: (value) => {
     ToastModel.class = value;
   },
+
   setContent: (value, displayTime = 3000) => {
     if (ToastModel.timer) {
       clearTimeout(ToastModel.timer);
-      ToastModel.timer = null;
+      ToastModel.clean();
     }
 
     ToastModel.content = value;
@@ -22,13 +23,17 @@ export const ToastModel = {
     }, displayTime);
   },
 
+  clean: () => {
+    ToastModel.timer = null;
+    ToastModel.class = null;
+    ToastModel.content = null;
+  },
+
   display: () => {
     m.redraw();
   },
   hide: (redrew) => {
-    ToastModel.content = null;
-    ToastModel.class = null;
-
+    ToastModel.clean();
     redrew && m.redraw();
   },
 };

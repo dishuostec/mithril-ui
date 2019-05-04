@@ -35,9 +35,7 @@ $toast-border-radius: $radius-large !default;
 
   &-content {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
 
     color: $toast-color;
     background-color: $toast-background-color;

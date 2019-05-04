@@ -22,6 +22,10 @@ export const ToastPage = {
               ToastModel.setContent('很长的内容，'.repeat(5));
             }}>很长的内容</Button>
 
+            <Button onclick={() => {
+              ToastModel.setContent(['多行内容', '多行内容', '多行内容']);
+            }}>多行内容</Button>
+
           </p>
           <Snippet code={`
             <Button onclick={() => {
