@@ -1,21 +1,16 @@
 import m from 'mithril';
 import classNames from 'classnames';
 import './MenuItem.scss';
+import { LinkWrapFactory } from '../../factory/LinkWrap.js';
+
+// export const Link = LinkWrapFactory('link', 'span');
+const MenuItemContainer = LinkWrapFactory('menu-item');
 
 export const MenuItem = {
-  view: ({ attrs: { to, onclick, title, subtitle, iconLeft, iconRight, tip, class: className, ...props } }) => {
-
-    const menuItemClass = classNames('menu-item', className);
+  view: ({ attrs: { title, subtitle, iconLeft, iconRight, tip, ...props } }) => {
 
     return (
-      <div
-        {...props}
-        class={menuItemClass}
-        onclick={() => {
-          to && m.route.set(to);
-          onclick && onclick();
-        }}
-      >
+      <MenuItemContainer {...props}>
         {iconLeft && <div class="menu-item-icon-left">{iconLeft}</div>}
 
         <div class="menu-item-content">
@@ -26,7 +21,7 @@ export const MenuItem = {
         {tip && <div class="menu-item-tip">{tip}</div>}
 
         {iconRight && <div class="menu-item-icon-right">{iconRight}</div>}
-      </div>
+      </MenuItemContainer>
     );
   },
 };
