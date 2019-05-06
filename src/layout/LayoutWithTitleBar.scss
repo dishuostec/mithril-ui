@@ -3,6 +3,7 @@
 #layout {
   @extend %fix-ios-header;
   @extend %fix-ios-footer;
+  background-color: $body-background-color;
   
   &.has-titleBar {
     @extend %has-layout-header;
