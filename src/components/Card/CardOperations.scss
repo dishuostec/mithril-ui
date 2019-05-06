@@ -3,11 +3,21 @@
 .card-operations {
   background-color: $card-footer-background-color;
   align-items: stretch;
-  justify-content: space-around;
+  justify-content: space-between;
   display: flex;
+  padding: px(30) 0;
 
   .button {
-    margin: $card-field-padding;
+    padding-left: 0;
+    padding-right: 0;
+    flex-grow: 1;
+    font-size: $size-normal;
+    font-weight: $weight-semibold;
+    border-width: px(2);
+
+    &:not(:last-child) {
+      margin-right: $padding;
+    }
 
     &.is-fullwidth {
       margin: 0;
