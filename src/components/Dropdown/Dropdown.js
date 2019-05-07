@@ -23,7 +23,7 @@ export const Dropdown = (initialVnote) => {
   };
 
   return {
-    view: ({ attrs: { text, isRight, isDropup, class: className, ...props }, children }) => {
+    view: ({ attrs: { text, wrapText = true, isRight, isDropup, class: className, ...props }, children }) => {
 
       const dropdownClass = classNames('dropdown', className, {
         'is-active': isActive,
@@ -44,7 +44,11 @@ export const Dropdown = (initialVnote) => {
             }}
           >
             <Button>
-              <span>{text}</span>
+              {
+                wrapText
+                  ? <span>{text}</span>
+                  : text
+              }
               <IconUi class="is-small" icon="triangle-down-outline" />
             </Button>
 
