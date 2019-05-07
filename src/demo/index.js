@@ -27,12 +27,14 @@ import { FormPage } from './form/FormPage';
 import { InputPage } from './form/InputPage';
 import { RadioPage } from './form/RadioPage';
 import { TextareaPage } from './form/TextareaPage';
+import { ProgressCirclePage } from './elements/ProgressCirclePage.js';
 
 const elements = {
   '/button': ButtonPage,
   '/icon': IconPage,
   '/indicator': IndicatorPage,
   '/link': LinkPage,
+  '/progressCircle': ProgressCirclePage,
   '/table': TablePage,
   '/tag': TagPage,
   '/title': TitlePage,

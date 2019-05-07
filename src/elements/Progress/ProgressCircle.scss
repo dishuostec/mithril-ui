@@ -1,0 +1,112 @@
+@import "../../scss/utils";
+
+%circle {
+  display: block;
+  height: 1em;
+  width: 1em;
+  box-sizing: border-box;
+  border: 0.12em solid $grey;
+  border-radius: 100%;
+}
+
+.progress-circle {
+  position: relative;
+  display: inline-block;
+
+  &:before {
+    content: "";
+    @extend %circle;
+  }
+
+  &-half {
+    position: absolute;
+    left: 0;
+    top: 0;
+    @extend %circle;
+    //border-color: rgba(255, 0, 0, 0.5);
+    clip: rect(0, 1em, 1em, 0.5em);
+  }
+
+  &-rect {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &-bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    @extend %circle;
+    //border-color: rgba(0, 255, 0, 0.5);
+    clip: rect(0, 0.5em, 1em, 0);
+    //transform: rotate(180deg);
+  }
+
+  // Colors
+  @each $name, $pair in $colors {
+    $color: nth($pair, 1);
+    $color-invert: nth($pair, 2);
+    &.is-#{$name} {
+      .progress-circle {
+        &-half,
+        &-bar {
+          border-color: $color;
+        }
+      }
+    }
+  }
+
+  // progress
+  @for $progress from 0 through 50 {
+    $deg: $progress / 100 * 360deg;
+    &.is-#{$progress} {
+
+      .progress-circle {
+        &-half {
+          display: none;
+        }
+
+        &-rect {
+          clip: rect(0, 1em, 1em, 0.5em);
+        }
+
+        &-bar {
+          transform: rotate($deg);
+        }
+      }
+    }
+  }
+
+  @for $progress from 51 through 100 {
+    $deg: $progress / 100 * 360deg;
+    &.is-#{$progress} {
+
+      .progress-circle {
+        &-bar {
+          transform: rotate($deg);
+        }
+      }
+    }
+  }
+
+  &.is-pending {
+    .progress-circle {
+      
+      &-half {
+        display: none;
+      }
+
+      &-rect {
+        clip: rect(0, 1em, 1em, 0.5em);
+        animation: spinAround 500ms infinite linear;
+      }
+      
+      &-bar {
+        transform: rotate(120deg);
+      }
+    }
+  }
+}
