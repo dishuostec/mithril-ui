@@ -15,6 +15,7 @@
 
   &-addon {
     position: absolute;
+    z-index: 1;
 
     &.is-left {
       left: 0;
