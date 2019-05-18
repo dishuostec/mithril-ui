@@ -4,9 +4,9 @@ import './Checkbox.scss';
 import { IconFa } from '../../elements/Icon/IconFa';
 
 export const Checkbox = {
-  view: ({ attrs: { checked, disabled, ...props }, children }) => (
+  view: ({ attrs: { class: className, checked, disabled, ...props }, children }) => (
     <label
-      class={classNames('checkbox', { 'is-checked': checked })}
+      class={classNames('checkbox', className, { 'is-checked': checked })}
       disabled={disabled}
       {...props}
     >
