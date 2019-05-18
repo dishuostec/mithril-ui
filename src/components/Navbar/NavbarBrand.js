@@ -3,10 +3,14 @@ import classNames from 'classnames';
 import { NavbarItemLink } from './NavbarItemLink';
 
 export const NavbarBrand = {
-  view: ({ attrs: { to, class: className, isActive, onclick, ...props }, children }) => (
+  view: ({ attrs: { to, isExternal, class: className, isActive, onclick, onBurgerClick, ...props }, children }) => (
     <div class="navbar-brand">
       <NavbarItemLink
         to={to}
+        isExternal={isExternal}
+        onclick={() => {
+          onclick && onclick();
+        }}
       >
         {children}
       </NavbarItemLink>
@@ -16,7 +20,7 @@ export const NavbarBrand = {
           'is-active': isActive,
         })}
         onclick={() => {
-          onclick && onclick();
+          onBurgerClick && onBurgerClick();
         }}
       >
         <span aria-hidden="true" />

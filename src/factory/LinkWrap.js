@@ -14,7 +14,7 @@ export const LinkWrapFactory = (wrapperClass, tagName = 'div') => {
       attrs.onclick = () => {
         onclick && onclick();
 
-        attrs.to && uiHandleLink(attrs.to);
+        attrs.to && uiHandleLink(attrs.to, attrs.isExternal);
       };
       return m(tagName, attrs, children);
     },
