@@ -7,10 +7,15 @@ import { LinkWrapFactory } from '../../factory/LinkWrap.js';
 const MenuItemContainer = LinkWrapFactory('menu-item');
 
 export const MenuItem = {
-  view: ({ attrs: { title, subtitle, iconLeft, iconRight, tip, ...props } }) => {
+  view: ({ attrs: { title, subtitle, iconLeft, iconRight, tip, isActive, class: className, ...props } }) => {
 
     return (
-      <MenuItemContainer {...props}>
+      <MenuItemContainer
+        class={classNames(className, {
+          'is-active': isActive,
+        })}
+        {...props}
+      >
         {iconLeft && <div class="menu-item-icon-left">{iconLeft}</div>}
 
         <div class="menu-item-content">

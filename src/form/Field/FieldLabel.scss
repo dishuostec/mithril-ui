@@ -2,7 +2,7 @@
 @import "../form.base";
 
 .field-label {
-  padding-right: 0.75rem;
+  margin-right: $field-horizontal-label-padding;
   min-width: $field-horizontal-label-min-width;
 
   .label {

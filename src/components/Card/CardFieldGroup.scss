@@ -23,6 +23,7 @@
     padding: 0;
 
     &:not(:first-child) {
+      margin-top: 0;
       margin-left: $card-field-margin-horizontal;
     }
 
