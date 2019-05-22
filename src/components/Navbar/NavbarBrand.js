@@ -8,8 +8,8 @@ export const NavbarBrand = {
       <NavbarItemLink
         to={to}
         isExternal={isExternal}
-        onclick={() => {
-          onclick && onclick();
+        onclick={(e) => {
+          onclick && onclick(e);
         }}
       >
         {children}
@@ -19,8 +19,8 @@ export const NavbarBrand = {
         class={classNames('navbar-burger', {
           'is-active': isActive,
         })}
-        onclick={() => {
-          onBurgerClick && onBurgerClick();
+        onclick={(e) => {
+          onBurgerClick && onBurgerClick(e);
         }}
       >
         <span aria-hidden="true" />

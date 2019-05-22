@@ -9,7 +9,7 @@ export const Form = {
       class={classNames('form', className)}
       onsubmit={(e) => {
         e.preventDefault();
-        onsubmit && onsubmit();
+        onsubmit && onsubmit(e);
       }}
     >{children}
     </form>

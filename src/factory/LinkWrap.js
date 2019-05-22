@@ -11,8 +11,8 @@ export const LinkWrapFactory = (wrapperClass, tagName = 'div') => {
     view: ({ attrs, children }) => {
       const { onclick } = attrs;
       attrs.class = classNames(wrapperClass, attrs.class);
-      attrs.onclick = () => {
-        onclick && onclick();
+      attrs.onclick = (e) => {
+        onclick && onclick(e);
 
         attrs.to && uiHandleLink(attrs.to, attrs.isExternal);
       };
