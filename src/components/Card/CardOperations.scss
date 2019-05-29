@@ -1,11 +1,11 @@
 @import './Card.base';
 
 .card-operations {
-  background-color: $card-footer-background-color;
+  background-color: $card-operation-background-color;
   align-items: stretch;
   justify-content: space-between;
   display: flex;
-  padding: px(30) 0;
+  padding: $card-operation-padding;
 
   .button {
     padding-left: 0;
