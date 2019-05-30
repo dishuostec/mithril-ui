@@ -9,13 +9,19 @@ export const ToastModel = {
     ToastModel.class = value;
   },
 
-  setContent: (value, displayTime = 3000) => {
+  setContent: (value, displayTime = null) => {
     if (ToastModel.timer) {
       clearTimeout(ToastModel.timer);
       ToastModel.clean();
     }
 
     ToastModel.content = value;
+    if (displayTime === null) {
+      displayTime = 3000;
+      displayTime += Array.isArray(value)
+        ? value.length * 500
+        : value.length * 80;
+    }
 
     ToastModel.timer = setTimeout(() => {
       ToastModel.timer = null;
