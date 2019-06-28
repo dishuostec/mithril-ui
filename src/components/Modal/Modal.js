@@ -35,7 +35,14 @@ export const Modal = {
         <CardOperations>
           {(ModalModel.operations.length
               ? ModalModel.operations
-              : <Button onclick={ModalModel.hide} class="is-primary">确定</Button>
+              : (
+                <Button
+                  onclick={ModalModel.hide}
+                  class="is-primary"
+                >
+                  {ModalModel.DEFAULT_BUTTON}
+                </Button>
+              )
           )}
         </CardOperations>
 
