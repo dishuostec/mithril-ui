@@ -40,6 +40,9 @@ export const ToastModel = {
   },
   hide: (redrew) => {
     ToastModel.clean();
-    redrew && m.redraw();
+    if (redrew) {
+      console.log('!!!!!!!!!!!!!! do hide', window.m === m);
+      m.redraw();
+    }
   },
 };
