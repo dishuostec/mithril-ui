@@ -28,6 +28,7 @@ import { InputPage } from './form/InputPage';
 import { RadioPage } from './form/RadioPage';
 import { TextareaPage } from './form/TextareaPage';
 import { ProgressCirclePage } from './elements/ProgressCirclePage.js';
+import { SelectPage } from './form/SelectPage.js';
 
 const elements = {
   '/button': ButtonPage,
@@ -46,6 +47,7 @@ const form = {
   '/form': FormPage,
   '/input': InputPage,
   '/radio': RadioPage,
+  '/select': SelectPage,
   '/textarea': TextareaPage,
 };
 
