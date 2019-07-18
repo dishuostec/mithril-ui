@@ -4,6 +4,7 @@
   "license": "MIT",
   "scripts": {
     "build": "yarn babel src --out-dir lib --source-maps --copy-files",
+    "demo": "parcel lib/demo/index.html",
     "dev": "yarn build --watch",
     "clean": "rm -rf ./lib/*",
     "prepublish": "npm run clean && npm run build",
@@ -30,11 +31,13 @@
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.2.2",
     "@babel/plugin-transform-react-jsx": "^7.3.0",
-    "@babel/preset-env": "^7.3.1"
+    "@babel/preset-env": "^7.3.1",
+    "mithril": "^2.0.0-rc.9",
+    "sass": "^1.22.6"
   },
   "peerDependencies": {
-    "mithril": "^2.0.0-rc.6",
-    "sass": "^1.16.1"
+    "mithril": "^2.0.0-rc.9",
+    "sass": "^1.22.6"
   },
   "engines": {
     "node": ">= 10.0.0"
