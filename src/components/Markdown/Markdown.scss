@@ -24,7 +24,6 @@ $md-blockquote-background-color: $white-bis !default;
 
 %container {
   margin: 1em 0;
-  width: 100%;
 }
 
 .markdown {
@@ -114,6 +113,7 @@ $md-blockquote-background-color: $white-bis !default;
 
   table {
     @extend %container;
+    width: 100%;
     border-collapse: collapse;
     color: $md-table-color;
     background-color: $md-table-background-color;
