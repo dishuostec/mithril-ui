@@ -15,6 +15,9 @@
 
   &-addon {
     position: absolute;
+    height: $layout-header-height;
+    display: flex;
+    align-items: center;
     z-index: 1;
 
     &.is-left {
