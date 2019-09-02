@@ -8,7 +8,7 @@ const defaultNumberConverter = (value, attrs) => {
   value = parseFloat(value);
 
   if (isNaN(value)) {
-    return null;
+    return 0;
   }
 
   const { min, max } = attrs;
