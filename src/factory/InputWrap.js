@@ -46,6 +46,7 @@ export const InputWrapFactory = (inputType, { defaultFilter, defaultConverter } 
               displayValue = value;
               isFocus = false;
               onblur && onblur();
+              oninput && oninput(value);
             }}
             oninput={(e) => {
               let value = e.target.value;
