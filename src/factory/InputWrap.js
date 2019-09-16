@@ -31,6 +31,31 @@ export const InputWrapFactory = (inputType, { defaultFilter, defaultConverter } 
 
         const formater = format || defaultFormat;
 
+        const inputHandler = (e) => {
+          let value = e.target.value;
+
+          // filters
+          if (defaultFilter) {
+            value = defaultFilter(value, attrs);
+          }
+          if (filter) {
+            value = filter(value, attrs);
+          }
+
+          displayValue = value;
+
+          if (oninput) {
+            // converters
+            if (defaultConverter) {
+              value = defaultConverter(value, attrs);
+            }
+            if (converter) {
+              value = converter(value, attrs);
+            }
+
+            oninput(value);
+          }
+        };
         return (
           <input
             {...props}
@@ -47,31 +72,8 @@ export const InputWrapFactory = (inputType, { defaultFilter, defaultConverter } 
               isFocus = false;
               onblur && onblur();
             }}
-            oninput={(e) => {
-              let value = e.target.value;
-
-              // filters
-              if (defaultFilter) {
-                value = defaultFilter(value, attrs);
-              }
-              if (filter) {
-                value = filter(value, attrs);
-              }
-
-              displayValue = value;
-
-              if (oninput) {
-                // converters
-                if (defaultConverter) {
-                  value = defaultConverter(value, attrs);
-                }
-                if (converter) {
-                  value = converter(value, attrs);
-                }
-
-                oninput(value);
-              }
-            }}
+            onchange={inputHandler}
+            oninput={inputHandler}
           />
         );
       },
