@@ -47,7 +47,7 @@ $md-blockquote-background-color: $white-bis !default;
 
   p {
     @extend %container;
-    word-break: break-all;
+    //word-break: break-all;
     white-space: normal;
     line-height: $md-font-size*1.4;
   }
