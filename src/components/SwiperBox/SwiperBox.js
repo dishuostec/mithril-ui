@@ -16,15 +16,15 @@ export const SwiperBox = () => {
 
   return {
     oncreate: (vnode) => {
-      const { isVertical, autoPlay, effect = 'slide', hasPagination = false, hasNavigation = false, hasScrollbar = false } = vnode.attrs;
+      const { isVertical, autoPlay, effect = 'slide', hasPagination = false, hasNavigation = false, hasScrollbar = false, config: externalConfig } = vnode.attrs;
 
 
-      const config = {
+      const config = Object.assign({
         direction: isVertical ? 'vertical' : 'horizontal',
         loop: true,
         autoplay: Number.isInteger(autoPlay) ? { delay: autoPlay } : autoPlay,
         effect,
-      };
+      }, externalConfig);
 
       if (hasPagination) {
         config.pagination = {
