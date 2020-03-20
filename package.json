@@ -23,7 +23,7 @@
     "classnames": "^2.2.6",
     "dedent": "^0.7.0",
     "highlight.js": "^9.14.1",
-    "inputmask": "^4.0.8",
+    "inputmask": "^5",
     "showdown": "^1.9.0",
     "swiper": "^4.4.6"
   },
