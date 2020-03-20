@@ -48,7 +48,7 @@ export const SwiperBox = () => {
 
       swiper = new Swiper(vnode.dom, config);
 
-      vnode.oncreate && vnode.oncreate(vnode);
+      vnode.attrs.oncreate && vnode.attrs.oncreate(vnode);
     },
     onremove: (vnode) => {
       if (swiper) {
